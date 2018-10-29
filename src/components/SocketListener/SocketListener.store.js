@@ -48,13 +48,14 @@ export function receiveThread (thread) {
   }
 }
 
-export function receivePost (data, communityId) {
+export function receivePost (data, communityId, networkId) {
   return {
     type: RECEIVE_POST,
     payload: {
       topics: data.tags,
       creatorId: data.creatorId,
-      communityId
+      communityId,
+      networkId
     }
   }
 }
@@ -93,6 +94,9 @@ export function ormSessionReducer (session, { meta, type, payload }) {
 
     case RECEIVE_POST:
       currentUser = Me.first()
+
+      console.log('!!!! RECEIVE_POST -- meta, payload:', meta, payload)
+      
       if (currentUser && payload.creatorId !== currentUser.id) {
         const increment = obj =>
           obj && obj.update({

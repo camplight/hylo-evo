@@ -256,6 +256,7 @@ export default class PrimaryLayout extends Component {
       <Route path='/t' component={Messages} />
       <SocketListener location={location} />
       <SocketSubscriber type='community' id={get('slug', community)} />
+      <SocketSubscriber type='network' id={get('slug', network)} />
       <Intercom appID={isTest ? null : config.intercom.appId} />
       {postEditorRoutes.map(({path}) => 
         <Route
