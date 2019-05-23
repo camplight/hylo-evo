@@ -7,6 +7,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 // import { split } from 'apollo-link'
 // import { get } from 'lodash/fp'
 import { HOLOCHAIN_ACTIVE } from 'util/holochain'
+import resolvers, { typeDefs } from 'client/apollo/resolvers'
 
 // * FOR USING APOLLO FOR BOTH HYLO-NODE API AND HOLOCHAIN CLIENT
 // const link = split(
@@ -37,7 +38,8 @@ const link = ApolloLink.from([
 
 const apolloClient = new ApolloClient({
   link,
-  // resolvers
+  resolvers,
+  typeDefs,
   cache: new InMemoryCache(),
   connectToDevTools: true
 })
