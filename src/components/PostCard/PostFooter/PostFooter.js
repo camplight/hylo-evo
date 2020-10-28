@@ -84,11 +84,6 @@ export default class PostFooter extends React.PureComponent {
         )
     }
 
-    if (type === 'project') {
-
-    } else {
-
-    }
     const { caption, avatarUrls } = peopleRowResult
 
     return <div styleName={cx('footer', { constrained })}>

@@ -63,7 +63,8 @@ const communityQuery = `query (
   $filter: String,
   $topic: ID,
   $first: Int,
-  $boundingBox: [PointInput]
+  $boundingBox: [PointInput],
+  $creatorUserId: ID
 ) {
   community(slug: $slug, updateLastViewed: true) {
     id
@@ -90,7 +91,8 @@ const networkQuery = `query (
   $filter: String,
   $topic: ID,
   $first: Int,
-  $boundingBox: [PointInput]
+  $boundingBox: [PointInput],
+  $creatorUserId: ID
 ) {
   network(slug: $networkSlug) {
     id
@@ -104,8 +106,9 @@ const allCommunitiesQuery = `query (
   $search: String,
   $filter: String,
   $topic: ID,
-  $first: Int
-  $boundingBox: [PointInput]
+  $first: Int,
+  $boundingBox: [PointInput],
+  $creatorUserId: ID
 ) {
   ${postsQueryFragment}
 }`

@@ -24,7 +24,7 @@ export function mapStateToProps (state, props) {
     ], props)
   }
 
-  // NOTE: In effort to better seperate the query caching from component details
+  // NOTE: In effort to better separate the query caching from component details
   //       it's better (and necessary) in this case to send the fetch param then
   //       the raw props of the component.
   const posts = getPosts(state, fetchPostsParam).map(p => presentPost(p, communityId))

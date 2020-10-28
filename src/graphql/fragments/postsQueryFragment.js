@@ -9,6 +9,7 @@ posts(
   filter: $filter,
   topic: $topic,
   boundingBox: $boundingBox,
+  creatorUserId: $creatorUserId,
   order: "desc"
 ) {
   hasMore
