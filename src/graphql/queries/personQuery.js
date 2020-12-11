@@ -56,8 +56,9 @@ export default
     affiliations {
       items {
         id
-        orgName
         role
+        preposition
+        orgName
         url
         createdAt
         updatedAt
