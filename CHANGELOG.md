@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Events section to member profile, showing upcoming events the person is attending
+- Add events section to member profile, showing upcoming events the person is attending
+- Add sections for Hylo communities and other affiliations on member profile
+- Update CommunitySettingsTab to list custom org affiliations and include a form to add new affiliations
 
 ## [2.2.2] - 2020-12-09
 ### Added
